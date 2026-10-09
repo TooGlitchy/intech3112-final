@@ -1,0 +1,27 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Dependencies and generated builds
+**/node_modules/
+**/vendor/
+**/dist/
+backend/public/build/
+
+# Local database, logs, and runtime cache
+backend/database/*.sqlite
+backend/database/*.sqlite-*
+backend/storage/logs/*
+backend/storage/framework/cache/data/*
+backend/storage/framework/sessions/*
+backend/storage/framework/views/*
+backend/bootstrap/cache/*.php
+*.log
+.DS_Store
