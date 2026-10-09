@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV PORT=10000
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends libpq-dev libzip-dev unzip git \
+    && apt-get install -y --no-install-recommends libpq-dev libzip-dev libonig-dev unzip git \
     && docker-php-ext-install pdo_pgsql mbstring bcmath zip \
     && a2enmod rewrite headers \
     && rm -rf /var/lib/apt/lists/*
